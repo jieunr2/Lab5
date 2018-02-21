@@ -19,20 +19,55 @@ public class BankAccount {
         WORKPLACE
     }
 
+    /**
+     * number of account.
+     */
     private int accountNumber;
-    public BankAccountType accountType;
+    /**
+     * type of account.
+     */
+    private BankAccountType accountType;
+    /**
+     * balance of account.
+     */
     private double accountBalance;
+    /**
+     * name of owner.
+     */
     private String ownerName;
-    public double interestRate;
+    /**
+     * rate of interest.
+     */
+    private double interestRate;
+    /**
+     * interest that are earned.
+     */
     private double interestEarned;
 
+    /**
+     *
+     * @param name
+     * @param accountCategory
+     */
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        this.ownerName = name;
+        this.accountType = accountCategory;
     }
 
-    /*
-     * Implement getters and setters as appropriate for private variables.
+    /**
+     * getting owners' name.
+     * @return owners' name
      */
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    /**
+     * getting the type of account.
+     * @return type of account
+     */
+    public BankAccountType getAccountType() {
+        return accountType;
+    }
+
 }
